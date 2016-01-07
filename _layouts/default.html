@@ -109,7 +109,7 @@
     {% endif %}
     <header id="usa_dot_gov_header">
       <div class="header_container">
-        <h1>analytics<a href="http://www.usa.gov" class="external-link">.usa.gov</a>&nbsp;{{page_title}}</h1>
+        <h1>ONS Beta web analytics</h1>
         <a id="about" href="#explanation" class="site-nav">About this site</a>
         <!-- Init a dropdown if the there are different agencies
         {% if site.agencies.size > 0 %}
@@ -159,7 +159,7 @@
 
         <section class="section_headline visits_today">
           <h3>Visits Today</h3>
-          <h4>Eastern Time</h4>
+          <h4>GMT</h4>
         </section>
         <section id="time_series"
           data-block="today"
@@ -272,8 +272,8 @@
           <h3>Top <span id="top_table_type">Pages</span></h3>
           <ul class="pills" role="tablist">
             <li><a role="tab" data-type="Pages" aria-selected="true" href="#top-pages-realtime" class="site-nav">Now</a></li>
-            <li><a role="tab" data-type="Domains" href="#top-pages-7-days" class="site-nav">7 Days</a></li>
-            <li><a role="tab" data-type="Domains" href="#top-pages-30-days" class="site-nav">30 Days</a></li>
+            <li><a role="tab" data-type="Pages" href="#top-pages-7-days" class="site-nav">7 Days</a></li>
+            <li><a role="tab" data-type="Pages" href="#top-pages-30-days" class="site-nav">30 Days</a></li>
           </ul>
 
           <figure class="top-pages" id="top-pages-realtime" role="tabpanel"
@@ -290,18 +290,21 @@
 
           <figure class="top-pages" id="top-pages-7-days" role="tabpanel"
             data-block="top-pages"
-            data-source="{{ data_url }}/top-domains-7-days.json">
-            <h5><em>Visits over the last week to <strong>domains</strong>, including traffic to all pages within that domain.</em></h5>
+            data-source="{{ data_url }}/top-pages-7-days.json">
+            <h5><em>
+              Visits over the last week to <strong>pages</strong>.
+              <a href="{{ data_url }}/top-pages-7-days.csv">Download the full dataset.</a>
+            </em></h5>
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure class="top-pages" id="top-pages-30-days" role="tabpanel"
             data-block="top-pages"
-            data-source="{{ data_url }}/top-domains-30-days.json">
+            data-source="{{ data_url }}/top-pages-30-days.json">
             <h5><em>
-              Visits over the last month to <strong>domains</strong>, including traffic to all pages within that domain.
-              <a href="{{ data_url }}/top-domains-30-days.csv">Download the full dataset.</a>
+              Visits over the last month to <strong>pages</strong>.
+              <a href="{{ data_url }}/top-pages-30-days.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
             </div>
