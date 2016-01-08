@@ -30,8 +30,8 @@ collections:
     permalink: /:path/
 
 # Site title and description
-title: "ONS beta web analytics"
-description: "Official data on web traffic to hundreds of US federal government websites. Published by the Digital Analytics Program."
+title: "ONS web analytics"
+description: "Official data on web traffic to the Office for National Statistics website."
 
 # Site's own URL
 url: http://analytics-ons-gov-uk.s3-website-eu-west-1.amazonaws.com
@@ -43,11 +43,11 @@ dropdown_title: All Agencies
 data_url: http://analytics-ons-gov-uk.s3-website-eu-west-1.amazonaws.com/ons-data
 
 # GitHub information
-org_name: GSA
+org_name: ONSdigital
 repo_name: analytics.usa.gov
 
 # twitter information
-twitter: usgsa
+twitter: ONSdigital
 
 sass:
   sass_dir: sass
