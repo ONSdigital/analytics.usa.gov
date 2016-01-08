@@ -210,19 +210,7 @@
 
     "countries": renderBlock()
       .transform(function(d) {
-        var total_visits = 0;
-        d.data.forEach(function(c) {
-          total_visits += parseInt(c.active_visitors);
-          if (c.country == "United States") {
-            us_visits = c.active_visitors;
-          }
-        });
-        var international = total_visits - us_visits;
-        var data = {
-          "United States": us_visits,
-          "International": international
-        };
-        return addShares(listify(data));
+        return addShares(listify(d.data));
 
       })
       .render(
@@ -233,9 +221,6 @@
     "international_visits": renderBlock()
       .transform(function(d) {
         var countries = addShares(d.data, function(d){ return d.active_visitors; });
-        countries = countries.filter(function(c) {
-          return c.country != "United States";
-        });
         return countries.slice(0, 15);
       })
       .render(

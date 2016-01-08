@@ -49,6 +49,7 @@
     <script src="{{ site.baseurl }}/js/vendor/d3.v3.min.js"></script>
 
     <script>
+    /*
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -58,6 +59,7 @@
     ga('set', 'anonymizeIp', true);
     ga('set', 'forceSSL', true);
     ga('send', 'pageview');
+    */
 
     document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -247,17 +249,16 @@
         <section id="countries" class="three_column">
           <h4>Countries</h4>
 
-          <figure id="chart_us"
+          <!--<figure id="chart_countries"
             data-block="countries"
             data-source="{{ data_url }}/top-countries-realtime.json">
             <div class="data bar-chart">
             </div>
-          </figure>
+          </figure>-->
 
           <figure id="chart_countries"
             data-block="international_visits"
             data-source="{{ data_url }}/top-countries-realtime.json">
-            <h4>International</h4>
             <div class="data bar-chart">
             </div>
           </figure>
@@ -281,7 +282,7 @@
             data-source="{{ data_url }}/top-pages-realtime.json"
             data-refresh="15">
             <h5><em>
-              People on a <strong>single, specific page</strong> now.
+              Visitors on a specific page now.
               <a href="{{ data_url }}/all-pages-realtime.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
@@ -292,7 +293,7 @@
             data-block="top-pages"
             data-source="{{ data_url }}/top-pages-7-days.json">
             <h5><em>
-              Visits over the last week to <strong>pages</strong>.
+              Visits to a specific page for the past <strong>7</strong> days.
               <a href="{{ data_url }}/top-pages-7-days.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
@@ -303,7 +304,7 @@
             data-block="top-pages"
             data-source="{{ data_url }}/top-pages-30-days.json">
             <h5><em>
-              Visits over the last month to <strong>pages</strong>.
+              Visits to a specific page for the past <strong>30</strong> days.
               <a href="{{ data_url }}/top-pages-30-days.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">

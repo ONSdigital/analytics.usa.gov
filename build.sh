@@ -13,3 +13,5 @@ export ANALYTICS_HOSTNAME=https://beta.ons.gov.uk
 
 analytics --output=ons-data
 analytics --output=ons-data --csv
+
+aws s3 cp --recursive --acl=public-read --cache-control="max-age=0" ./ons-data s3://analytics-ons-gov-uk/ons-data

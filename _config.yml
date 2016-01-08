@@ -29,18 +29,18 @@ collections:
     output: true
     permalink: /:path/
 
-# Site title and description 
-title: "analytics.usa.gov | The US government's web traffic."
+# Site title and description
+title: "ONS beta web analytics"
 description: "Official data on web traffic to hundreds of US federal government websites. Published by the Digital Analytics Program."
 
 # Site's own URL
-url: https://analytics.usa.gov 
+url: http://analytics-ons-gov-uk.s3-website-eu-west-1.amazonaws.com
 
 # Default dropdown title, will not appear if there are no sub-pages
-dropdown_title: All Agencies 
+dropdown_title: All Agencies
 
 # Default data url
-data_url: https://analytics.usa.gov/data/live
+data_url: http://analytics-ons-gov-uk.s3-website-eu-west-1.amazonaws.com/ons-data
 
 # GitHub information
 org_name: GSA
