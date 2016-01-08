@@ -270,7 +270,7 @@
           .append("a")
             .attr("target", "_blank")
             .attr("href", function(d) {
-              return exceptions[d.domain] || ("http://" + d.page);
+              return exceptions[d.domain] || ("https://beta.ons.gov.uk" + d.page);
             })
             .text(function(d) {
               return title_exceptions[d.page_title] || d.page_title;
